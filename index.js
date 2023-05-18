@@ -167,32 +167,6 @@ app.get("/empleados",(req,res)=>{
     });
 });
 
-app.get("/detallePedido",(req,res)=>{
-    const detallePedidos=[
-        {
-            id:1,
-            nombre:'Carlos Morales',
-            numdocumento: 1035877546,
-            estado: 'Activo',
-        },
-        {
-            id:2,
-            nombre:'Diego Lopez',
-            numdocumento: 100000456,
-            estado: 'Activo',
-        },
-        {
-            id:3,
-            nombre:'Marcela Morales',
-            numdocumento: 1035000046,
-            estado: 'Inactiva',
-        }
-    ]
-    res.render("detallePedido",{
-        lista_detallePedidos:detallePedidos
-    });
-});
-
 
 app.get('/crearProducto',(req,res)=>{
     res.render("components/crearProducto");
@@ -214,12 +188,20 @@ app.get('/crearEmpleado',(req,res)=>{
     res.render("components/crearEmpleado");
 })
 
+app.get('/',(req,res)=>{
+    res.render("inicio")
+})
+
+app.get('/login',(req,res)=>{
+    res.render("login")
+})
+
 app.get('*',(req,res)=>{
     res.render("error")
 })
 
 
 
-app.listen(8095, () => {
+app.listen(8096, () => {
     console.log('sin errores');
 })
