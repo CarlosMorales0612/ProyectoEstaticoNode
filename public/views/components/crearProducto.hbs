@@ -1,0 +1,42 @@
+
+{{> header}}
+<link rel="stylesheet" href="../../css/estado.css">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">CREAR PRODUCTO</span>
+                    <form class="mt-3">
+                        <div class="mb-3">
+                            <input type="text" id="Nombre" class="from-control from-contol-lg" placeholder="Nombre">                          
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="Categoria" class="from-control from-contol-lg" placeholder="Categoria">                            
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="Stock" class="from-control from-contol-lg" placeholder="Stock">                           
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="Cantidad"  class="from-control from-contol-lg" placeholder="Cantidad">                           
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" id="PrecioVenta" class="from-control from-contol-lg" placeholder="PrecioVenta">
+                        </div>
+                        <label class="switch">
+                                <input type="checkbox" id="toggleBtn">
+                                <span class="slider round"></span>
+                        </label>
+                        <div class="mb-3">
+                            <button class="btn btn-secondary"> VOLVER</button>
+                            <button id="btnRegistrarProducto"  type="button" class="btn btn-success">ACEPTAR</button>
+                        </div>
+                    </form>
+                    <div class="erroresProductos" id="erroresProductos"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/producto.js"></script>
+{{> footer}}

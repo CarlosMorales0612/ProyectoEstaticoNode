@@ -1,0 +1,57 @@
+{{> header}}
+<link rel="stylesheet" href="../css/styles.css">
+  <div class="container- mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">EMPLEADOS</span>
+                    <a href="/crearEmpleado"><button class="btn btn-success float-end">NUEVO</button></a>
+                    <div class="container-fluid mt-3">
+                    <form class="search-form">
+                      <input type="text" class="search-input float-start" placeholder="Buscar empleado...">
+                      <button type="submit" class="btn btn-primary float-start"><i class="fa-solid
+                          fa-search "></i></button>
+                      </form>
+                    </div>
+                    <div class="table-responsive mt-3">
+                    <table class="table table-striped ">
+
+  <thead>
+    <tr>
+       <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">NumDocumento</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each lista_empleados}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{nombre}}</td>
+      <td>{{numdocumento}}</td>
+      <td>{{estado}}</td>
+      <td>
+        <button class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+        <button class="btn btn-success"><i class="fa-solid fa-toggle-on"></i></button>
+      </td>
+    </tr>
+    </div>
+    {{/each}}
+  
+    
+  </tbody>
+</table>
+<div class="botones">
+        <button class="btn btn-success float-end"><i class="fa-solid fa-file-pdf"></i></button>
+        <button class="btn btn-info float-end"><i class="fa-sharp fa-solid fa-file-excel"></i></button>
+      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+{{> footer}}

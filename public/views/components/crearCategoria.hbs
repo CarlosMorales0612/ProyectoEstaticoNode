@@ -1,0 +1,36 @@
+
+{{> header}}
+<link rel="stylesheet" href="../../css/estado.css">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">CREAR CATEGORIA</span>
+                    <form class="mt-3">
+                        <div class="mb-3">
+                            <input type="text" id="Nombre" class="from-control from-contol-lg" placeholder="Nombre">                          
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="Descripcion" class="from-control from-contol-lg" placeholder="Descripcion">                            
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="Estado" class="from-control from-contol-lg" placeholder="Estado">                           
+                        </div>
+                        <label class="switch">
+                                <input type="checkbox" id="toggleBtn">
+                                <span class="slider round"></span>
+                        </label>
+                        <div class="mb-3">
+                            <button class="btn btn-secondary"> VOLVER</button>
+                            <button id="btnRegistrarCategoria"  type="button" class="btn btn-success">ACEPTAR</button>
+                        </div>
+                    </form>
+                    <div class="erroresCategoria" id="erroresCategoria"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/categoria.js"></script>
+{{> footer}}
